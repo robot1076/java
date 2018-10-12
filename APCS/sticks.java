@@ -1,4 +1,5 @@
 
+import javax.swing.JOptionPane;
 import java.util.Scanner;
 /**
  * Plays a game of 21 sticks with an actual human.
@@ -78,7 +79,7 @@ public class sticks
                     input = 0;
                 }
             
-                if (!(input == 1 || input == 2) && !(input > sticks)) { //checks for a non 1 or 2 value
+                if (!(input == 1 || input == 2) || (input > sticks)) { //checks for a non 1 or 2 value
                     System.out.println("Oops! Please enter 1 or 2 sticks, " + u + "!");
                     inputAccepted = false;
                 }
